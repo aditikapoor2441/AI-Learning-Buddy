@@ -1,5 +1,3 @@
-!pip install -q streamlit pyngrok google-generativeai
-
 
 import streamlit as st
 import google.generativeai as genai
@@ -44,22 +42,9 @@ if st.button("Generate"):
         st.success("Done!")
         st.write(response.text)
 
-!pkill streamlit
 
-!nohup streamlit run app.py --server.port 8501 &
 
-import time
-time.sleep(10)
 
-!cat nohup.out
-
-!pip install -q pyngrok
-
-from pyngrok import ngrok
-ngrok.set_auth_token("3GGFWYYNcm8p5YIXdiigX4avOvc_7ukeYivqbYX4vPfzU7Hke")
-
-public_url = ngrok.connect(8501)
-print(public_url)
 
 
 
